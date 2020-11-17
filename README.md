@@ -48,9 +48,10 @@ cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riên
 
 - chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
-
+-tải và extract model chúng ta chọn
 *API TF 2 pre train model*
 - tạo 1 cây thư mục giống vậy
+
 ```
 TensorFlow
 ├───scripts
@@ -73,7 +74,6 @@ item {
 }
 name chính là tên class mà khi ta label ta lấy ví dụ class 1  khi ta label là class1 thì chỗ này phải để là class1 không được có dấu cách,bao nhiêu class thì để bấy nhiêu item thôi
 ```
-- tải file generate_tfrecords.py  tại  https://github.com/sglvladi/TensorFlowObjectDetectionTutorial/tree/master/docs/source/scripts
 - chỉnh sửa file pipeline.config 
 ```
 Line 3:
@@ -97,26 +97,28 @@ label_map_path: "annotations/label_map.pbtxt" (#path to your label_map file)
 Line 186:
 input_path: "annotations/test.record" (#Path to test.record)
 ```
-
+- sau đó bỏ các file vào trong các thư mục đã tạo theo sơ đồ sau
 ```
 TensorFlow
 ├───scripts
 │   └───preprocessing
-│     └───generate_tfrecord.py 
+│     └───**generate_tfrecord.py** 
 └───workspace
     └───training_demo
         ├───annotations
-        │   └───label_map.pbtxt 
+        │   └───**label_map.pbtxt**
         ├───exported-models
         ├───images
         │   ├───test
-        │   │     └───test images with corresponding XML files
+        │   │     └───**test images with corresponding XML files**
         │   └───train
-        │         └───train images with corresponding XML files
+        │         └───**train images with corresponding XML files**
         ├───models
         │   └───my_ssd_resnet50_v1_fpn
-        │     └───pipeline.config
+        │     └───**pipeline.config**
         └───pre-trained-models
-            └───ssd_resnet152_v1_fpn_640x640_coco17_tpu-8
+            └───**ssd_resnet152_v1_fpn_640x640_coco17_tpu-8**
+**model_main_tf2.py**
+**exporter_main_v2.py**
 ```
 
