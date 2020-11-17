@@ -50,5 +50,40 @@ chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh r
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
 
 *API TF 2 pre train model
+- tạo 1 cây thư mục giống vậy
+TensorFlow
+├───scripts
+│   └───preprocessing
+└───workspace
+    └───training_demo
+        ├───annotations
+        ├───exported-models
+        ├───images
+        │   ├───test
+        │   └───train
+        ├───models
+        └───pre-trained-models
+        
+- tạo file label_map.pbxt
+
+TensorFlow
+├───scripts
+│   └───preprocessing
+│     └───generate_tfrecord.py 
+└───workspace
+    └───training_demo
+        ├───annotations
+        │   └───label_map.pbtxt 
+        ├───exported-models
+        ├───images
+        │   ├───test
+        │   │     └───test images with corresponding XML files
+        │   └───train
+        │         └───train images with corresponding XML files
+        ├───models
+        │   └───my_ssd_resnet50_v1_fpn
+        │     └───pipeline.config
+        └───pre-trained-models
+            └───ssd_resnet152_v1_fpn_640x640_coco17_tpu-8
 
 
