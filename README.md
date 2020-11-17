@@ -40,7 +40,7 @@ cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riên
 - link trong github luôn là file frame.py đó (cái này yêu cầu máy phải python ,nếu chạy trên google colab luôn thì phải đổi đường link input/output thành link trên google drive)
 - nhớ là link trên window khác link trên google colab nhé.chỉnh sửa link cho đúng là ok)
 
-** sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain
+** sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain **
 
 chúng ta sử dụng phần mềm labelImg.exe(trước search google có giờ không thấy) hoặc làm theo hướng dẫn https://github.com/tzutalin/labelImg
 
@@ -49,7 +49,7 @@ chúng ta có thể chia 3 class thành 2 model vì xe máy khá nhỏ và nhi�
 chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
 
-*API TF 2 pre train model
+* API TF 2 pre train model *
 - tạo 1 cây thư mục giống vậy
 ```
 TensorFlow
@@ -66,6 +66,16 @@ TensorFlow
         └───pre-trained-models
  ```       
 - tạo file label_map.pbxt
+```
+item {
+      id: 1
+      name: 'class 1'
+}
+name chính là tên class mà khi ta label ta lấy ví dụ class 1  khi ta label là class1 thì chỗ này phải để là class1 không được có dấu cách,bao nhiêu class thì để bấy nhiêu item thôi
+```
+- tải file generate_tfrecords.py  tại  https://github.com/sglvladi/TensorFlowObjectDetectionTutorial/tree/master/docs/source/scripts
+
+
 ```
 TensorFlow
 ├───scripts
