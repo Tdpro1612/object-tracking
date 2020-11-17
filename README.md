@@ -51,6 +51,7 @@ sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
 
 *API TF 2 pre train model
 - tạo 1 cây thư mục giống vậy
+```
 TensorFlow
 ├───scripts
 │   └───preprocessing
@@ -63,9 +64,9 @@ TensorFlow
         │   └───train
         ├───models
         └───pre-trained-models
-        
+ ```       
 - tạo file label_map.pbxt
-
+```
 TensorFlow
 ├───scripts
 │   └───preprocessing
@@ -85,5 +86,5 @@ TensorFlow
         │     └───pipeline.config
         └───pre-trained-models
             └───ssd_resnet152_v1_fpn_640x640_coco17_tpu-8
-
+```
 
