@@ -1,4 +1,4 @@
-# đếm số xe qua camera giao thông trong 1 khoảng thời gian
+## đếm số xe qua camera giao thông trong 1 khoảng thời gian
 
 nguồn data 
 video : https://drive.google.com/drive/folders/1LHZFrl72IrDrXxudG9Mss6RG-KKnF4WI?usp=sharing
@@ -12,7 +12,7 @@ có 3 bước
 
 link tham khảo : https://github.com/hcmcaic/ai-challenge-2020
 
-# Bài giải
+## Bài giải
 nhận xét bài toán
 đầu tiên bạn nên chạy hết file của link tham khảo để xem xét các bước nó làm thế nào và kết quả nó ra sao để có thể hiểu được bài toán giải thế nào.
 lưu ý dòng code phần Đọc dữ liệu từ video
@@ -25,19 +25,20 @@ from tqdm import tqdm #@markdown Your videos is stored in:
 nó bị lỗi thiếu chữ m thôi nhé sửa lại là ok run thôi 
 
 qua bài tham khảo ta có thể thấy model train sẵn không tốt lắm chúng ta cần train lại theo các class ta cần 
-class 1 : xe 2 bánh : xe máy,xe đạp
-class 2 : ô tô con 4-6 chỗ ngồi
-class 3 : ô tô 9 chỗ trở lên,xe buýt
-class 4 : xe tải,xe container
+- class 1 : xe 2 bánh : xe máy,xe đạp
+- class 2 : ô tô con 4-6 chỗ ngồi
+- class 3 : ô tô 9 chỗ trở lên,xe buýt
+- class 4 : xe tải,xe container
 
-bước 1 : pretrain lại model
-- đối với sinh viên có thể sử dụng google colab để train tạm(vì nghèo làm gì có máy GPU :D)
+### bước 1 : pretrain lại model
+*** đối với sinh viên có thể sử dụng google colab để train tạm(vì nghèo làm gì có máy GPU :D)
 ở đây hướng dẫn bằng cách xài Tensorflow 2 API để nhận diện vật thể(object detection)
-- đầu tiên xử lý data :(cái này lấy ở đâu ?)
+** đầu tiên xử lý data :(cái này lấy ở đâu ?)
 ta nên lấy trong video là tốt nhất.(ban đầu mình search google tìm ảnh camera giao thông sau đó nó không tốt vì size ảnh trên google không đều train không tốt.
 cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riêng thành 1 file cho bạn nào không rành
-link trong github luôn là file frame.py đó
-
+- link trong github luôn là file frame.py đó (cái này yêu cầu máy phải python ,nếu chạy trên google colab luôn thì phải đổi đường link input/output thành link trên google drive)
+- nhớ là link trên window khác link trên google colab nhé.chỉnh sửa link cho đúng là ok)
+** sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain
 
 
 
