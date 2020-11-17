@@ -33,11 +33,13 @@ qua bài tham khảo ta có thể thấy model train sẵn không tốt lắm ch
 ### bước 1 : pretrain lại model
 *** đối với sinh viên có thể sử dụng google colab để train tạm(vì nghèo làm gì có máy GPU :D)
 ở đây hướng dẫn bằng cách xài Tensorflow 2 API để nhận diện vật thể(object detection)
+
 ** đầu tiên xử lý data :(cái này lấy ở đâu ?)
 ta nên lấy trong video là tốt nhất.(ban đầu mình search google tìm ảnh camera giao thông sau đó nó không tốt vì size ảnh trên google không đều train không tốt.
 cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riêng thành 1 file cho bạn nào không rành
 - link trong github luôn là file frame.py đó (cái này yêu cầu máy phải python ,nếu chạy trên google colab luôn thì phải đổi đường link input/output thành link trên google drive)
 - nhớ là link trên window khác link trên google colab nhé.chỉnh sửa link cho đúng là ok)
+
 ** sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain
 
 
