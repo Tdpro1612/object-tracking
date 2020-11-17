@@ -48,7 +48,9 @@ cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riên
 
 - chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
--tải và extract model chúng ta chọn
+sau khi label xong chúng ta chia thành 2 forder train/test và file xml kèm theo
+-tải và extract model chúng ta chọn tại https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md  
+Ở đây sử dụng ssd_resnet152_v1_fpn_640x640_coco17_tpu-8
 *API TF 2 pre train model*
 - tạo 1 cây thư mục giống vậy
 
