@@ -79,11 +79,11 @@ name chính là tên class mà khi ta label ta lấy ví dụ class 1  khi ta la
 Line 3:
 num_classes: 1 (#number of classes your model can classify/ number of different labels)
 Line 131:
-batch_size: 16 (#you can read more about batch_size here)
+batch_size: 1 (#you can read more about batch_size here)
 Line 161:
-fine_tune_checkpoint: "pre-trained-models/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0" (#path to checkpoint of downloaded pre-trained-model)
+fine_tune_checkpoint: "pre-trained-models/ssd_resnet152_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0" (#path to checkpoint of downloaded pre-trained-model)
 Line 162:
-num_steps: 250000 (#maximum number of steps to train model, note that this specifies the maximum number of steps, you can stop model training on any step you wish)
+num_steps: 50000 (#maximum number of steps to train model,max is 250000 note that this specifies the maximum number of steps, you can stop model training on any step you wish)
 Line 167:
 fine_tune_checkpoint_type: "detection" (#since we are training full detection model, you can read more about model fine-tuning here)
 Line 168:
