@@ -34,22 +34,22 @@ qua bài tham khảo ta có thể thấy model train sẵn không tốt lắm ch
 *** đối với sinh viên có thể sử dụng google colab để train tạm(vì nghèo làm gì có máy GPU :D)
 ở đây hướng dẫn bằng cách xài Tensorflow 2 API để nhận diện vật thể(object detection)
 
-** đầu tiên xử lý data :(cái này lấy ở đâu ?)
+**đầu tiên xử lý data :(cái này lấy ở đâu ?)**
 ta nên lấy trong video là tốt nhất.(ban đầu mình search google tìm ảnh camera giao thông sau đó nó không tốt vì size ảnh trên google không đều train không tốt.
 cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riêng thành 1 file cho bạn nào không rành
 - link trong github luôn là file frame.py đó (cái này yêu cầu máy phải python ,nếu chạy trên google colab luôn thì phải đổi đường link input/output thành link trên google drive)
 - nhớ là link trên window khác link trên google colab nhé.chỉnh sửa link cho đúng là ok)
 
-** sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain **
+**sau khi có các frame của các video rồi(1 tập ảnh trung bình 1s=10 ảnh ) chúng ta sẽ lựa các ảnh để label lại pretrain**
 
-chúng ta sử dụng phần mềm labelImg.exe(trước search google có giờ không thấy) hoặc làm theo hướng dẫn https://github.com/tzutalin/labelImg
+- chúng ta sử dụng phần mềm labelImg.exe(trước search google có giờ không thấy) hoặc làm theo hướng dẫn https://github.com/tzutalin/labelImg
 
-chúng ta có thể chia 3 class thành 2 model vì xe máy khá nhỏ và nhiều trong khi 3 class còn lại quá ít dẫn đến data train không đều.
+- chúng ta có thể chia 3 class thành 2 model vì xe máy khá nhỏ và nhiều trong khi 3 class còn lại quá ít dẫn đến data train không đều.
 
-chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
+- chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
 
-* API TF 2 pre train model *
+*API TF 2 pre train model*
 - tạo 1 cây thư mục giống vậy
 ```
 TensorFlow
@@ -74,7 +74,29 @@ item {
 name chính là tên class mà khi ta label ta lấy ví dụ class 1  khi ta label là class1 thì chỗ này phải để là class1 không được có dấu cách,bao nhiêu class thì để bấy nhiêu item thôi
 ```
 - tải file generate_tfrecords.py  tại  https://github.com/sglvladi/TensorFlowObjectDetectionTutorial/tree/master/docs/source/scripts
-
+- chỉnh sửa file pipeline.config 
+```
+Line 3:
+num_classes: 1 (#number of classes your model can classify/ number of different labels)
+Line 131:
+batch_size: 16 (#you can read more about batch_size here)
+Line 161:
+fine_tune_checkpoint: "pre-trained-models/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0" (#path to checkpoint of downloaded pre-trained-model)
+Line 162:
+num_steps: 250000 (#maximum number of steps to train model, note that this specifies the maximum number of steps, you can stop model training on any step you wish)
+Line 167:
+fine_tune_checkpoint_type: "detection" (#since we are training full detection model, you can read more about model fine-tuning here)
+Line 168:
+use_bfloat16: false (#Set this to true only if you are training on a TPU)
+Line 172:
+label_map_path: "annotations/label_map.pbtxt" (#path to your label_map file)
+Line 174:
+input_path: "annotations/train.record" (#path to train.record)
+Line 182:
+label_map_path: "annotations/label_map.pbtxt" (#path to your label_map file)
+Line 186:
+input_path: "annotations/test.record" (#Path to test.record)
+```
 
 ```
 TensorFlow
