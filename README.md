@@ -129,4 +129,7 @@ vào file **API TF 2 pre train model.ipynb** run thôi
 
 sau khi chạy xong ta sẽ có các model đã pretrain lại các class,detect 1 vài sample trong đó
 
-### Bước 3 phát hiện MOI và ROI thôi nào
+### Bước 2 & 3 phát hiện MOI và ROI thôi nào
+run file dl_detect_tf2_2-3.ipynb  để truy xuất kết quả .
+
+trong quá trình run test các frame ta có thể thấy rằng 
