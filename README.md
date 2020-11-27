@@ -124,3 +124,5 @@ TensorFlow
 **exporter_main_v2.py**
 ```
 
+Sau khi sắp xêp ảnh theo sơ đồ trên
+vào file **project API TF 2 pre train model.ipynb** run thôi
