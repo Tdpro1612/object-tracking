@@ -130,7 +130,8 @@ vào file **API TF 2 pre train model.ipynb** run thôi
 sau khi chạy xong ta sẽ có các model đã pretrain lại các class,detect 1 vài sample trong đó
 
 ### Bước 2 & 3 phát hiện MOI và ROI thôi nào
-run file track class 1.ipynb  để truy xuất kết quả .(cái này viết lại từ file dl_detect_tf2_2_3.ipynb
+run file track class 1.ipynb  để truy xuất kết quả .(cái này viết lại từ file dl_detect_tf2_2_3.ipynb)
+
 nó sẽ track từng frame như thế này và sau đó sẽ gộp trong IOU
 
 ![track frame](https://user-images.githubusercontent.com/61773507/100399181-ff8c6b00-300e-11eb-8bf6-d7efc1554839.jpg)
