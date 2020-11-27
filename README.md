@@ -44,7 +44,7 @@ cách lấy ảnh trong link tham khảo có 1 đoạn code mình tách ra riên
 
 - chúng ta sử dụng phần mềm labelImg.exe(trước search google có giờ không thấy) hoặc làm theo hướng dẫn https://github.com/tzutalin/labelImg
 
-- chúng ta có thể chia 3 class thành 2 model vì xe máy khá nhỏ và nhiều trong khi 3 class còn lại quá ít dẫn đến data train không đều.
+- chúng ta có thể chia 4 class thành 2 model vì xe máy khá nhỏ và nhiều trong khi 3 class còn lại quá ít dẫn đến data train không đều.
 
 - chúng ta có thể lựa mỗi video tầm 150 ảnh .10 video là 1500 ảnh rồi.rất nhiều đó đối class 1 có thể giảm xuống 1 ít tầm 100 ảnh 1 video vì chỉ train riêng nó thôi không sợ
 sau khi label xong chúng ta bỏ vào theo hướng dẫn trong bài
