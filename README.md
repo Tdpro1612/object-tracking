@@ -142,3 +142,7 @@ trong quá trình run test các frame ta có thể thấy rằng
 
 thay đổi min sc có thể hữu hiệu track các vật phẩm nên ta có thể lựa chon 1 con số sc sao cho phù hợp
 
+
+**ĐÂY LÀ KẾT QUẢ TEST CLASS 1  có dạng thế này**
+
+![test class1](https://user-images.githubusercontent.com/61773507/100400407-b1c63180-3013-11eb-8819-9ebf5c7d30c9.jpg)
