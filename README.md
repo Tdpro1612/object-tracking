@@ -125,4 +125,8 @@ TensorFlow
 ```
 
 Sau khi sắp xêp ảnh theo sơ đồ trên
-vào file **project API TF 2 pre train model.ipynb** run thôi
+vào file **API TF 2 pre train model.ipynb** run thôi
+
+sau khi chạy xong ta sẽ có các model đã pretrain lại các class,detect 1 vài sample trong đó
+
+### Bước 3 phát hiện MOI và ROI thôi nào
