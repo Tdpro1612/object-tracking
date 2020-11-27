@@ -133,3 +133,5 @@ sau khi chạy xong ta sẽ có các model đã pretrain lại các class,detect
 run file dl_detect_tf2_2-3.ipynb  để truy xuất kết quả .
 
 trong quá trình run test các frame ta có thể thấy rằng 
+![test](https://user-images.githubusercontent.com/61773507/100399111-b6d4b200-300e-11eb-8d52-f16d1995e0a0.jpg)
+ thay đổi min sc có thể hữu hiệu track các vật phẩm nên ta có thể lựa chon 1 con số sc sao cho phù hợp
