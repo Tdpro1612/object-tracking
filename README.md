@@ -149,4 +149,6 @@ thay đổi min sc có thể hữu hiệu track các vật phẩm nên ta có th
 
 
 ** TƯƠNG TỰ VỚI CÁC CLASS CÒN LẠI THÔI
+
+
 GOOD LUCK
