@@ -146,3 +146,7 @@ thay đổi min sc có thể hữu hiệu track các vật phẩm nên ta có th
 **ĐÂY LÀ KẾT QUẢ TEST CLASS 1  có dạng thế này**
 
 ![test class1](https://user-images.githubusercontent.com/61773507/100400407-b1c63180-3013-11eb-8819-9ebf5c7d30c9.jpg)
+
+
+** TƯƠNG TỰ VỚI CÁC CLASS CÒN LẠI THÔI
+GOOD LUCK
